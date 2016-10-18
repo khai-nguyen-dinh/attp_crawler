@@ -1,0 +1,4 @@
+scrapy
+pymongo
+proxylist
+validate_email

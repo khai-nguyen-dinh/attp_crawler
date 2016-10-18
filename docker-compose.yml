@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+    scrapy:
+      image: khainguyendinh/scrapy:latest
+      volumes:
+          - ./crawl_new/:/crawl_new/
+          - ./vbpl/:/vbpl/
+          - ./crawl.sh:/crawl.sh
+      hostname: scrapy
+      tty: true
