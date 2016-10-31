@@ -9,7 +9,7 @@ class Stackover(scrapy.Spider):
     name = 'vfa'
     allowed_domains = ['http://vfa.gov.vn','foodsafety.gov.vn']
     start_urls = [
-        'http://vfa.gov.vn/tin-tuc.html?page=10'
+        'http://vfa.gov.vn/tin-tuc.html'
     ]
 
     def parse(self, response):
@@ -28,7 +28,7 @@ class Stackover(scrapy.Spider):
             request.meta['item'] = temp
             yield request
 
-        next_page = response.xpath('//a[@rel="prev"]/@href')
+        next_page = response.xpath('//a[@rel="next"]/@href')
         if next_page:
             url = response.urljoin(next_page.extract_first())
             yield scrapy.Request(url, callback=self.parse, dont_filter=True)

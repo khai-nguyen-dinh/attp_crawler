@@ -1,0 +1,12 @@
+setup.py
+crawl_new/__init__.py
+crawl_new/items.py
+crawl_new/pipelines.py
+crawl_new/settings.py
+crawl_new/spiders/__init__.py
+crawl_new/spiders/vfa.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
